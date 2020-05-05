@@ -5,13 +5,14 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Room;
+import android.arch.persistence.room.Update;
 
 import java.util.List;
 
 import br.com.alura.agenda.model.Aluno;
 
 @Dao
-public interface RoomAlunoDAO {
+public interface AlunoDAO {
     @Insert
     void salva(Aluno aluno);
 
@@ -20,5 +21,8 @@ public interface RoomAlunoDAO {
 
     @Delete
     void remove(Aluno aluno);
+
+    @Update
+    void edita(Aluno aluno);
 }
 
